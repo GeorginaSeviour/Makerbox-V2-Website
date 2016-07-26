@@ -1,0 +1,31 @@
+{
+  "name": "makerbox-v2-website",
+  "version": "1.0.0",
+  "description": "Website for the maker community to share project ideas for others and schools ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeorginaSeviour/Makerbox-V2-Website.git"
+  },
+  "author": "Georgina Seviour",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GeorginaSeviour/Makerbox-V2-Website/issues"
+  },
+  "homepage": "https://github.com/GeorginaSeviour/Makerbox-V2-Website#readme",
+  "dependencies": {
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1",
+    "webpack": "^1.13.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.11.4",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
