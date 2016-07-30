@@ -16,6 +16,9 @@
     "url": "https://github.com/GeorginaSeviour/Makerbox-V2-Website/issues"
   },
   "homepage": "https://github.com/GeorginaSeviour/Makerbox-V2-Website#readme",
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
   "dependencies": {
     "react": "^15.2.1",
     "react-dom": "^15.2.1",

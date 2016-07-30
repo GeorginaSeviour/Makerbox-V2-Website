@@ -1,0 +1,10 @@
+.wrapper {
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+}
+
+.text {
+    color: white;
+}
