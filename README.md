@@ -8,3 +8,7 @@ Install:
 Run the web app:
 1. `npm start`
 2. Go to localhost:8080
+
+Development:
+1. Create React components in src
+2. Implement in main/App.js

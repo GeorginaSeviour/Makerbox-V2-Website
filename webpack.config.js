@@ -1,19 +1,52 @@
-var path = require('path');
-var webpack = require('webpack');
+/* eslint-env node */
+/* eslint-disable no-process-env */
+const HtmlWebpackPlugin = require('html-webpack-plugin'),
+    path = require("path");
 
-module.exports = {
-  entry: './main.js',
-  output: { path: __dirname, filename: 'bundle.js' },
-  module: {
-    loaders: [
-      {
-        test: /.jsx?$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
-        query: {
-          presets: ['es2015', 'react']
-        }
-      }
+
+const options = {
+    entry: [
+        path.join(__dirname, 'main/main.js')
+    ],
+    devtool: 'eval-source-map',
+    devServer: {
+        port: 8080
+    },
+    module: {
+        loaders: [
+            {
+                test: /\.js[x]?$/,
+                loader: "babel",
+                include: [
+                    path.resolve("src"),
+                    path.resolve("main")
+                ],
+                query: {
+                    presets: ["es2015", "stage-0", "react"]
+                }
+            },
+            {
+                test: /\.css$/,
+                loader: 'style!css?modules&localIdentName=[name]---[local]---[hash:base64:5]'
+            },
+            {
+                test: [/\.woff/, /\.eot/, /\.woff2/, /\.ttf/, /\.svg/],
+                loader: 'url?limit=20'
+            }
+        ]
+    },
+    output: {
+        path: path.resolve('dist'),
+        filename: '[name].js',
+        publicPath: '/'
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: 'main/index.tpl.html',
+            inject: 'body',
+            filename: 'index.html'
+        })
     ]
-  },
 };
+
+module.exports = options;
