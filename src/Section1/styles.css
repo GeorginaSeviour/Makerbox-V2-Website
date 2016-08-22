@@ -1,29 +1,8 @@
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    background-image: url('https://static.wixstatic.com/media/f52d7d_285932d847d2471aacf8edec543ecfce.png/v1/crop/x_0,y_81,w_2560,h_1434/fill/w_952,h_728,al_c,usm_0.66_1.00_0.01/f52d7d_285932d847d2471aacf8edec543ecfce.png');
-    background-size: cover;
-    background-position: center top;
-    height: 100vh;
-    min-height: 600px;
-}
-
-
-.logo {
-  height: 10px;
-  width: 24px;
-}
-
-.playText {
-  font-size: 10px;
-}
-
-.subText {
-  font-size: 8px;
-}
-
-.revText {
-  font-size: 14px;
+.backgroundImage {
+  background-image: url('./startImage.png');
+  height: 596px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: brightness(35%);
+  filter: brightness(35%);
 }
