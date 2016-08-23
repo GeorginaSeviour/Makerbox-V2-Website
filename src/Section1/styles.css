@@ -5,4 +5,35 @@
   background-size: cover;
   -webkit-filter: brightness(35%);
   filter: brightness(35%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo {
+  align-self: flex-start;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.playButton {
+  background-color: transparent;
+  border: 3px solid;
+  border-color: orange;
+  color: orange;
+}
+
+.slogan {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 24px;
+  width: 500px;
+  text-align: center;
+  padding: 15px; 
 }
