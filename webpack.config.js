@@ -30,8 +30,8 @@ const options = {
                 loader: 'style!css?modules&localIdentName=[name]---[local]---[hash:base64:5]'
             },
             {
-                test: [/\.woff/, /\.eot/, /\.woff2/, /\.ttf/, /\.svg/],
-                loader: 'url?limit=20'
+                test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+                loader: 'url-loader?limit=100000'
             }
         ]
     },
