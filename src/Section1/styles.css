@@ -1,3 +1,10 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .backgroundImage {
   background-image: url('./startImage.png');
   height: 596px;
@@ -5,14 +12,14 @@
   background-size: cover;
   -webkit-filter: brightness(35%);
   filter: brightness(35%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 .logo {
   align-self: flex-start;
+  color: orange;
+  font-weight: 700;
+  border: 1px solid;
+  border-color: orange;
 }
 
 .buttonContainer {
@@ -35,5 +42,5 @@
   font-size: 24px;
   width: 500px;
   text-align: center;
-  padding: 15px; 
+  padding: 15px;
 }
