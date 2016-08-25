@@ -1,7 +1,7 @@
 import React from 'react';
 import {PropTypes} from 'react';
 import {Button} from 'react-bootstrap';
-import {Modal} from 'react-bootstrap';
+import {Modal, Image} from 'react-bootstrap';
 import styles from './styles.css';
 
 class Tasks extends React.Component {
@@ -25,8 +25,8 @@ class Tasks extends React.Component {
   }
 
   renderTasks() {
-    const randomNumber = Math.floor(Math.random() * (3 - 1 + 1)) + 1;
-    console.log(randomNumber);
+    const randomNumber = this.props.taskGroup;
+    console.log('task Num', randomNumber);
 
 
 
@@ -122,5 +122,9 @@ class Tasks extends React.Component {
   );
   }
 }
+
+Tasks.propTypes = {
+  taskGroup: PropTypes.number
+};
 
 export default Tasks;
