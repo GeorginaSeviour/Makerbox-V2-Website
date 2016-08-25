@@ -7,7 +7,9 @@
    align-items: center;
 }
 
-
+.modal {
+  width: 850px;
+}
 
 .text_only_lommelykt {
   background-image: url('./text_only_lommelykt.png');
@@ -38,7 +40,7 @@
 }
 
 .illustration_lommelykt {
-  background-image: url('./illustration_papirbro.png');
+  background-image: url('./illustration_lommelykt.jpg');
   background-repeat: no-repeat;
   height: 800px;
   width: 500px;
@@ -49,6 +51,48 @@
   background-repeat: no-repeat;
   height: 800px;
   width: 500px;
+}
+
+.text_only_lommelykt_modal {
+  background-image: url('./text_only_lommelykt_modal.png');
+  background-repeat: no-repeat;
+  height: 450px;
+  width: 800px;
+}
+
+.text_only_papirbro_modal {
+  background-image: url('./text_only_papirbro_modal.png');
+  background-repeat: no-repeat;
+  height: 450px;
+  width: 800px;
+}
+
+.illustration_lommelykt_modal {
+  background-image: url('./illustration_lommelykt_modal.png');
+  background-repeat: no-repeat;
+  height: 450px;
+  width: 800px;
+}
+
+.illustration_papirbro_modal {
+  background-image: url('./illustration_papirbro_modal.png');
+  background-repeat: no-repeat;
+  height: 450px;
+  width: 800px;
+}
+
+.photo_lommelykt_modal {
+  background-image: url('./photo_lommelykt_modal.png');
+  background-repeat: no-repeat;
+  height: 450px;
+  width: 800px;
+}
+
+.photo_papirbro_modal {
+  background-image: url('./photo_papirbro_modal.png');
+  background-repeat: no-repeat;
+  height: 450px;
+  width: 800px;
 }
 
 .finishButton {

@@ -20,9 +20,7 @@ export default class App extends React.Component {
   render() {
     return (
       <div className={styles.wrapper}>
-        {
-          //<Section1 />
-        }
+        <Section1 />
         <Tasks
           taskGroup={this.getTaskGroup()}
           />
