@@ -1,0 +1,59 @@
+
+
+.style_wrapper {
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+}
+
+
+
+.text_only_lommelykt {
+  background-image: url('./text_only_lommelykt.png');
+  background-repeat: no-repeat;
+  height: 800px;
+  width: 500px;
+}
+
+.text_only_papirbro {
+  background-image: url('./text_only_papirbro.png');
+  background-repeat: no-repeat;
+  height: 800px;
+  width: 500px;
+}
+
+.photo_lommelykt {
+  background-image: url('./photo_lommelykt.png');
+  background-repeat: no-repeat;
+  height: 800px;
+  width: 500px;
+}
+
+.photo_papirbro {
+  background-image: url('./photo_papirbro.png');
+  background-repeat: no-repeat;
+  height: 800px;
+  width: 500px;
+}
+
+.illustration_lommelykt {
+  background-image: url('./illustration_papirbro.png');
+  background-repeat: no-repeat;
+  height: 800px;
+  width: 500px;
+}
+
+.illustration_papirbro {
+  background-image: url('./illustration_papirbro.png');
+  background-repeat: no-repeat;
+  height: 800px;
+  width: 500px;
+}
+
+.finishButton {
+  background-color: transparent;
+  border: 3px solid;
+  border-color: orange;
+  color: orange;
+}
