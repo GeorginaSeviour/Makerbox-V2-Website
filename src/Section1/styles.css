@@ -6,20 +6,36 @@
 }
 
 .backgroundImage {
-  background-image: url('./startImage.png');
+  background-image: url('./section1.png');
   height: 596px;
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-filter: brightness(35%);
-  filter: brightness(35%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.logo {
-  align-self: flex-start;
-  color: orange;
-  font-weight: 700;
-  border: 1px solid;
-  border-color: orange;
+.section2Image {
+  margin-top: 30px;
+  background-image: url('./section2.png');
+  height: 900px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.section3Image {
+  margin-top: 30px;
+  background-image: url('./section3.png');
+  height: 900px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.section4Image {
+  margin-top: 30px;
+  background-image: url('./section4.png');
+  height: 900px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .buttonContainer {
@@ -30,17 +46,19 @@
 }
 
 .playButton {
-  background-color: transparent;
   border: 3px solid;
   border-color: orange;
   color: orange;
+  width: 100px;
+  font-size: x-large;
 }
 
 .slogan {
+  margin-top: 30px;
   color: #ffffff;
   font-weight: 700;
-  font-size: 24px;
-  width: 500px;
+  font-size: 32px;
+  width: 700px;
   text-align: center;
   padding: 15px;
 }

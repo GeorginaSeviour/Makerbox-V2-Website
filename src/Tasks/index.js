@@ -39,6 +39,7 @@ class Tasks extends React.Component {
 
   renderTasks() {
     const randomNumber = this.props.taskGroup;
+    //const randomNumber = 2;
     console.log('task Num', randomNumber);
 
 
