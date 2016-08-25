@@ -7,9 +7,14 @@ import styles from './styles.css';
 class Tasks extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {showModal: false};
+    this.state = {
+      showModal: false,
+      modalId: 0,
+      taskType: null
+    };
     this.close = this.close.bind(this);
-    this.open = this.open.bind(this);
+    this.openLight = this.openLight.bind(this);
+    this.openBridge = this.openBridge.bind(this);
   }
 
   /*getInitialState() {
@@ -20,8 +25,16 @@ class Tasks extends React.Component {
     this.setState({ showModal: false });
   }
 
-  open() {
+  openLight() {
     this.setState({ showModal: true });
+    this.setState({modalId: this.props.taskGroup});
+    this.setState({taskType: 'light'});
+  }
+
+  openBridge() {
+    this.setState({ showModal: true });
+    this.setState({modalId: this.props.taskGroup});
+    this.setState({taskType: 'bridge'})
   }
 
   renderTasks() {
@@ -37,11 +50,11 @@ class Tasks extends React.Component {
           >
           <div
             className={styles.text_only_lommelykt}
-            onClick={this.open}
+            onClick={this.openLight}
             />
           <div
             className={styles.text_only_papirbro}
-            onClick={this.open}
+            onClick={this.openBridge}
             />
         </div>
       )
@@ -51,12 +64,12 @@ class Tasks extends React.Component {
             className={styles.style_wrapper}
             >
           <div
-            className={styles.text_only_lommelykt}
-            onClick={this.open}
+            className={styles.illustration_lommelykt}
+            onClick={this.openLight}
             />
           <div
-            className={styles.text_only_papirbro}
-            onClick={this.open}
+            className={styles.illustration_papirbro}
+            onClick={this.openBridge}
             />
           {/*<span
             src={styles.photo_lommelykt}
@@ -72,12 +85,12 @@ class Tasks extends React.Component {
             className={styles.style_wrapper}
             >
           <div
-            className={styles.text_only_lommelykt}
-            onClick={this.open}
+            className={styles.photo_lommelykt}
+            onClick={this.openLight}
             />
           <div
-            className={styles.text_only_papirbro}
-            onClick={this.open}
+            className={styles.photo_papirbro}
+            onClick={this.openBridge}
             />
           {/*<img
             src={'./photo_lommelykt.png'}
@@ -87,6 +100,54 @@ class Tasks extends React.Component {
             />*/}
         </div>
       )
+    }
+  }
+
+  renderModalContents() {
+    if (this.state.modalId === 1) {
+      if (this.state.taskType === 'light') {
+        return (
+          <div
+            className={styles.text_only_lommelykt_modal}>
+          </div>
+        );
+      } else {
+        return (
+          <div
+            className={styles.text_only_papirbro_modal}>
+          </div>
+        );
+      }
+    } else if (this.state.modalId === 2) {
+      if (this.state.taskType === 'light') {
+        return (
+          <div
+            className={styles.illustration_lommelykt_modal}>
+          </div>
+        );
+      } else {
+        return (
+          <div
+            className={styles.illustration_papirbro_modal}>
+          </div>
+        );
+      }
+    } else if (this.state.modalId === 3) {
+      if (this.state.taskType === 'light') {
+        return (
+          <div
+            className={styles.photo_lommelykt_modal}>
+          </div>
+        );
+      } else {
+        return (
+          <div
+            className={styles.photo_papirbro_modal}>
+          </div>
+        );
+      }
+    } else {
+      return null;
     }
   }
   render() {
@@ -106,15 +167,15 @@ class Tasks extends React.Component {
           </Button>
         </div>
 
-          <Modal show={this.state.showModal} onHide={this.close}>
+          <Modal show={this.state.showModal} onHide={this.close}  dialogClassName={styles.modal}>
           <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <h4>Text in a modal</h4>
+            {this.renderModalContents()}
+
           </Modal.Body>
           <Modal.Footer>
-            <Button onClick={this.close}>Close</Button>
+            <Button onClick={this.close}>Finished</Button>
           </Modal.Footer>
         </Modal>
 
