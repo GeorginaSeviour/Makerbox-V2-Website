@@ -2,6 +2,8 @@ import React from 'react';
 import {PropTypes} from 'react';
 import {Button} from 'react-bootstrap';
 import {Modal, Image} from 'react-bootstrap';
+import EasyTimer from 'easytimer';
+import Timer from '../Timer';
 import styles from './styles.css';
 
 class Tasks extends React.Component {
@@ -154,6 +156,32 @@ class Tasks extends React.Component {
   render() {
     return (
       <div>
+        <div className={styles.timerWrapper}>
+          <Timer/>
+        </div>
+        {/*<div id="chronoExample">
+          <div class="values">00:00:00</div>
+          <div>
+            <button
+              class="startButton"
+              onClick={this.openLight}
+              >
+              Start
+            </button>
+            <button
+              class="pauseButton"
+              onClick={this.openLight}
+              >
+              Pause
+            </button>
+            <button
+              class="stopButton"
+              onClick={this.openLight}
+              >
+              Stop
+            </button>
+          </div>
+        </div>*/}
         <div className={styles.tasksWrapper}>
           {this.renderTasks()}
         </div>

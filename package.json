@@ -35,7 +35,6 @@
       "email": "nathan2484@hotmail.co.uk"
     }
   ],
-  "homepage": "https://github.com/DuckyTeam/ducky-components",
   "scripts": {
     "start": "webpack-dev-server"
   },
