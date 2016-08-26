@@ -67,7 +67,7 @@ class Timer extends React.Component {
 
     open() {
     }
-    
+
     tick() {
         let millis = this.state.millis + 1;
         let seconds = this.state.seconds;
@@ -162,7 +162,7 @@ class Timer extends React.Component {
                 </Modal.Header>
                 <Modal.Body>
                   <div className={styles.modalWrapper}>
-                    {'Congratulations! You have completed the tasks in '}
+                    <p>{'Congratulations!'} <br/>{'You have completed the tasks in: '}</p>
                     {this.state.totalTime}
                   </div>
 

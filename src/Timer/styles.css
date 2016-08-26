@@ -102,3 +102,12 @@ body{
   border-color: orange;
   color: orange;
 }
+
+.modalWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  font-size: 32px;
+}
