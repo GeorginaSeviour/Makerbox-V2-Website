@@ -10,12 +10,16 @@
   "keywords": [
     "express",
     "webpack",
-    "node"
+    "node",
+    "heroku"
   ],
   "author": "Georgina Seviour",
   "license": "MIT",
   "bugs": {
     "url": ""
+  },
+  "engines": {
+    "node": "6.3.0"
   },
   "scripts": {
     "start": "webpack-dev-server"
@@ -41,9 +45,11 @@
     "webpack-hot-middleware": "^2.12.1"
   },
   "dependencies": {
+    "express": "^4.14.0",
     "file-system": "^2.2.1",
     "mysql": "^2.11.1",
     "node-mysql": "^0.4.2",
+    "pg": "^6.1.0",
     "react-bootstrap": "^0.30.3",
     "react-router": "^2.7.0"
   }
