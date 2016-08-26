@@ -169,7 +169,7 @@ class Timer extends React.Component {
                 </Modal.Body>
                 <Modal.Footer>
                   <Link to='/'>
-                    <Button onClick={this.close}>Completed Exercise</Button>
+                    <Button className={styles.modalButton} onClick={this.close}>Home</Button>
                   </Link>
                 </Modal.Footer>
               </Modal>
