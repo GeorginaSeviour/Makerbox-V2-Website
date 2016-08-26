@@ -13,20 +13,12 @@ class Section1 extends React.Component {
     this.open = this.open.bind(this);
   }
 
-  /*getInitialState() {
-    return { showModal: false };
-  }*/
-
   close() {
     this.setState({ showModal: false });
   }
 
   open() {
     this.setState({ showModal: true });
-  }
-
-  handlePlayClick() {
-    console.log('clicked');
   }
 
   render() {

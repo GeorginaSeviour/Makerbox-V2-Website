@@ -1,4 +1,8 @@
-
+.timerWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
 .style_wrapper {
    display: flex;
@@ -8,49 +12,59 @@
 }
 
 .modal {
-  width: 850px;
+  margin-top: 100px;
+  width: 750px;
 }
 
 .text_only_lommelykt {
   background-image: url('./text_only_lommelykt.png');
   background-repeat: no-repeat;
   height: 800px;
-  width: 500px;
+  width: 400px;
+  margin-right: 50px;
+  background-size: contain;
 }
 
 .text_only_papirbro {
   background-image: url('./text_only_papirbro.png');
   background-repeat: no-repeat;
   height: 800px;
-  width: 500px;
+  width: 400px;
+  background-size: contain;
 }
 
 .photo_lommelykt {
   background-image: url('./photo_lommelykt.png');
   background-repeat: no-repeat;
   height: 800px;
-  width: 500px;
+  width: 400px;
+  margin-right: 50px;
+  background-size: contain;
 }
 
 .photo_papirbro {
   background-image: url('./photo_papirbro.png');
   background-repeat: no-repeat;
   height: 800px;
-  width: 500px;
+  width: 400px;
+  background-size: contain;
 }
 
 .illustration_lommelykt {
   background-image: url('./illustration_lommelykt.png');
   background-repeat: no-repeat;
   height: 800px;
-  width: 500px;
+  width: 400px;
+  margin-right: 50px;
+  background-size: contain;
 }
 
 .illustration_papirbro {
   background-image: url('./illustration_papirbro.png');
   background-repeat: no-repeat;
   height: 800px;
-  width: 500px;
+  width: 400px;
+  background-size: contain;
 }
 
 .text_only_lommelykt_modal {
@@ -93,11 +107,4 @@
   background-repeat: no-repeat;
   height: 450px;
   width: 800px;
-}
-
-.finishButton {
-  background-color: transparent;
-  border: 3px solid;
-  border-color: orange;
-  color: orange;
 }
