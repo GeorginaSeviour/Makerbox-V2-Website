@@ -50,31 +50,31 @@ class Section1 extends React.Component {
               <Modal.Title>{"Enter your team details"}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              Team name: <input type="text" name="TeamName"/><br/>
+              Team name: <input type="text" name="TeamName" required/><br/>
             <h5>{"Person 1"}</h5>
               <form action="">
-                <input type="radio" name="gender" value="male"/> Male<br/>
+                <input type="radio" name="gender" value="male" required/> Male<br/>
                 <input type="radio" name="gender" value="female"/> Female
-                <input className={styles.ageForm} type="number" name="age" /> Age<br/>
+                <input className={styles.ageForm} type="number" name="age" required/> Age<br/>
               </form>
               <br/>
               <h5>{"Person 2"}</h5>
               <form action="">
-                <input type="radio" name="gender" value="male"/> Male<br/>
+                <input type="radio" name="gender" value="male"required/> Male<br/>
                 <input type="radio" name="gender" value="female"/> Female
-                <input className={styles.ageForm} type="number" name="age" /> Age<br/>
+                <input className={styles.ageForm} type="number" name="age" required/> Age<br/>
               </form>
               <br/>
               <h5>{"Person 3"}</h5>
               <form action="">
-                <input type="radio" name="gender" value="male"/> Male<br/>
+                <input type="radio" name="gender" value="male"required/> Male<br/>
                 <input type="radio" name="gender" value="female"/> Female
-                <input className={styles.ageForm} type="number" name="age" /> Age<br/>
+                <input className={styles.ageForm} type="number" name="age" required/> Age<br/>
               </form>
             </Modal.Body>
             <Modal.Footer>
               <Link to='/tasks'>
-                <Button onClick={this.close}>{"Submit"}</Button>
+                <input type="submit" value="Submit"/>
               </Link>
             </Modal.Footer>
           </Modal>
