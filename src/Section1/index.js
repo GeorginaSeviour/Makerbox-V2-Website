@@ -62,19 +62,22 @@ class Section1 extends React.Component {
             <h5>{"Person 1"}</h5>
               <form action="">
                 <input type="radio" name="gender" value="male"/> Male<br/>
-                <input type="radio" name="gender" value="female"/> Female<br/>
+                <input type="radio" name="gender" value="female"/> Female
+                <input className={styles.ageForm} type="number" name="age" /> Age<br/>
               </form>
               <br/>
               <h5>{"Person 2"}</h5>
               <form action="">
                 <input type="radio" name="gender" value="male"/> Male<br/>
-                <input type="radio" name="gender" value="female"/> Female<br/>
+                <input type="radio" name="gender" value="female"/> Female
+                <input className={styles.ageForm} type="number" name="age" /> Age<br/>
               </form>
               <br/>
               <h5>{"Person 3"}</h5>
               <form action="">
                 <input type="radio" name="gender" value="male"/> Male<br/>
-                <input type="radio" name="gender" value="female"/> Female<br/>
+                <input type="radio" name="gender" value="female"/> Female
+                <input className={styles.ageForm} type="number" name="age" /> Age<br/>
               </form>
             </Modal.Body>
             <Modal.Footer>
