@@ -75,6 +75,14 @@ body{
     transition: 300ms all;
 }
 
+.btn.start {
+  float: left;
+}
+
+.btn.stop {
+  float: right;
+}
+
 .btn.selected {
     border-color:green;
 }
@@ -86,4 +94,11 @@ body{
 
 .btn.disabled {
     opacity: 0.7;
+}
+
+.finishButton {
+  background-color: transparent;
+  border: 3px solid;
+  border-color: orange;
+  color: orange;
 }

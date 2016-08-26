@@ -1,7 +1,6 @@
 import React from 'react';
 import {PropTypes} from 'react';
-import {Button} from 'react-bootstrap';
-import {Modal, Image} from 'react-bootstrap';
+import {Modal, Button, Image} from 'react-bootstrap';
 import EasyTimer from 'easytimer';
 import Timer from '../Timer';
 import styles from './styles.css';
@@ -18,10 +17,6 @@ class Tasks extends React.Component {
     this.openLight = this.openLight.bind(this);
     this.openBridge = this.openBridge.bind(this);
   }
-
-  /*getInitialState() {
-    return { showModal: false };
-  }*/
 
   close() {
     this.setState({ showModal: false });
@@ -41,7 +36,6 @@ class Tasks extends React.Component {
 
   renderTasks() {
     const randomNumber = this.props.taskGroup;
-    //const randomNumber = 2;
     console.log('task Num', randomNumber);
 
 
@@ -74,12 +68,6 @@ class Tasks extends React.Component {
             className={styles.illustration_papirbro}
             onClick={this.openBridge}
             />
-          {/*<span
-            src={styles.photo_lommelykt}
-            />
-          <span
-            src={styles.photo_papirbro}
-            />*/}
         </div>
       )
     } else if (randomNumber === 3) {
@@ -95,12 +83,6 @@ class Tasks extends React.Component {
             className={styles.photo_papirbro}
             onClick={this.openBridge}
             />
-          {/*<img
-            src={'./photo_lommelykt.png'}
-            />
-          <img
-            src={'./photo_lommelykt.png'}
-            />*/}
         </div>
       )
     }
@@ -159,41 +141,8 @@ class Tasks extends React.Component {
         <div className={styles.timerWrapper}>
           <Timer/>
         </div>
-        {/*<div id="chronoExample">
-          <div class="values">00:00:00</div>
-          <div>
-            <button
-              class="startButton"
-              onClick={this.openLight}
-              >
-              Start
-            </button>
-            <button
-              class="pauseButton"
-              onClick={this.openLight}
-              >
-              Pause
-            </button>
-            <button
-              class="stopButton"
-              onClick={this.openLight}
-              >
-              Stop
-            </button>
-          </div>
-        </div>*/}
         <div className={styles.tasksWrapper}>
           {this.renderTasks()}
-        </div>
-        <div
-          className={styles.buttonContainer}
-          >
-          <Button
-            bsSize={'large'}
-            className={styles.finishButton}
-            >
-            {'Finished'}
-          </Button>
         </div>
 
           <Modal show={this.state.showModal} onHide={this.close}  dialogClassName={styles.modal}>

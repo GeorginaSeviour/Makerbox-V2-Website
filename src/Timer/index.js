@@ -128,7 +128,7 @@ class Timer extends React.Component {
                         onClick={this._handleStartClick}>Start</button>
                     <button ref="btnStop"
                         className="btn stop disabled"
-                        onClick={this._handleStopClick}>Stop</button>
+                        onClick={this._handleStopClick}>Finished</button>
                       {/*<button ref="btnReset"
                         className="btn reset disabled"
                         onClick={this._handleResetClick}>Reset</button>*/}
