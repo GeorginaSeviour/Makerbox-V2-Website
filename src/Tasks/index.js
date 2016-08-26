@@ -1,7 +1,6 @@
 import React from 'react';
 import {PropTypes} from 'react';
-import {Modal, Button, Image} from 'react-bootstrap';
-import EasyTimer from 'easytimer';
+import {Modal, Button} from 'react-bootstrap';
 import Timer from '../Timer';
 import styles from './styles.css';
 

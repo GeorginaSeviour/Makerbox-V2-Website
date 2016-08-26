@@ -1,4 +1,4 @@
-var mysql      = require('mysql');
+/*var mysql      = require('mysql');
 var connection = mysql.createConnection({
   host     : 'mysql.stud.ntnu.no',
   user     : 'trulshn',
@@ -24,14 +24,14 @@ var group  = {
   totaltime:  '6'
 }
 
-/*connection.query('SELECT * from groups', function(err, rows, fields) {
+connection.query('SELECT * from groups', function(err, rows, fields) {
   if (!err)
     console.log('The solution is: ', rows);
   else
     console.log('Error while performing Query.');
 });
 
-connection.end();*/
+connection.end();
 
 var query = connection.query('INSERT into groups set ?', group, function(err, result) {
   if (err) {
@@ -41,4 +41,4 @@ var query = connection.query('INSERT into groups set ?', group, function(err, re
   console.log(result);
 
   console.log('The solution is: ', group);
-});
+});*/

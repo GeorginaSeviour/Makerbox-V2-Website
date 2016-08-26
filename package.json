@@ -1,40 +1,22 @@
 {
-  "name": "ducky-components",
+  "name": "maker-box",
   "version": "0.1.0",
-  "description": "Ducky component project",
+  "description": "MakerBox",
   "main": "server.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/DuckyTeam/ducky-components.git"
+    "url": ""
   },
   "keywords": [
     "express",
     "webpack",
     "node"
   ],
-  "author": "Christian Alfoni",
+  "author": "Georgina Seviour",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DuckyTeam/ducky-components/issues"
+    "url": ""
   },
-  "contributors": [
-    {
-      "name": "Emil Lysholm",
-      "email": "emil.lysholm@gmail.com"
-    },
-    {
-      "name": "Christian Alfoni",
-      "email": "emailchristianalfoni@gmail.com"
-    },
-    {
-      "name": "Tommy Østgaard",
-      "email": "emailtommy.ostgaard@gmail.com"
-    },
-    {
-      "name": "Nathan Bird",
-      "email": "nathan2484@hotmail.co.uk"
-    }
-  ],
   "scripts": {
     "start": "webpack-dev-server"
   },
@@ -44,7 +26,6 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.6.0",
-    "carte-blanche": "^0.3.1",
     "classnames": "^2.2.3",
     "css-loader": "^0.23.1",
     "file-loader": "^0.8.4",
@@ -60,8 +41,7 @@
     "webpack-hot-middleware": "^2.12.1"
   },
   "dependencies": {
-    "d3": "^3.5.16",
-    "moment": "^2.14.1",
+    "file-system": "^2.2.1",
     "mysql": "^2.11.1",
     "node-mysql": "^0.4.2",
     "react-bootstrap": "^0.30.3",

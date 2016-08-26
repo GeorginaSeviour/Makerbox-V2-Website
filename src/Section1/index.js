@@ -4,6 +4,8 @@ import {PropTypes} from 'react';
 import {Button, Modal} from 'react-bootstrap';
 import classNames from 'classnames';
 import styles from './styles.css';
+//import file from 'file-system';
+
 
 class Section1 extends React.Component {
   constructor(props) {
@@ -11,6 +13,16 @@ class Section1 extends React.Component {
     this.state = {showModal: false};
     this.close = this.close.bind(this);
     this.open = this.open.bind(this);
+  }
+
+  writeData() {
+    /*fs = require('fs');
+    fs.writeFile('test.txt', 'Hello World!', function (err) {
+          if (err)
+              return console.log(err);
+      console.log('Hello World > helloworld.txt');
+    });*/
+    console.log('mahhh!');
   }
 
   close() {
@@ -22,6 +34,7 @@ class Section1 extends React.Component {
   }
 
   render() {
+
     return (
       <div>
         <div className={styles.backgroundImage}>
@@ -74,7 +87,13 @@ class Section1 extends React.Component {
             </Modal.Body>
             <Modal.Footer>
               <Link to='/tasks'>
-                <input type="submit" value="Submit"/>
+                <Button
+                  bsSize={'large'}
+                  className={styles.playButton}
+                  onClick={this.close}
+                  >
+                  {'Play'}
+                </Button>
               </Link>
             </Modal.Footer>
           </Modal>

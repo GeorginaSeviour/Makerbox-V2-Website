@@ -5,6 +5,7 @@ import styles from './App.css';
 import Image from '../src/Image';
 import Section1 from '../src/Section1';
 import TaskId from '../src/TaskId';
+import Finish from '../src/Finish';
 
 export default class App extends React.Component {
 

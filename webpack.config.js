@@ -1,7 +1,8 @@
 /* eslint-env node */
 /* eslint-disable no-process-env */
 const HtmlWebpackPlugin = require('html-webpack-plugin'),
-    path = require("path");
+    path = require("path"),
+    fs = require("fs");
 
 
 const options = {

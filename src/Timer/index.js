@@ -3,6 +3,8 @@
 // https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 import React from 'react';
 import styles from './styles.css';
+import {Link} from 'react-router';
+import {Modal, Button} from 'react-bootstrap';
 
 
 class Timer extends React.Component {
@@ -14,12 +16,16 @@ class Timer extends React.Component {
         this.state = {
             minutes: 0,
             seconds: 0,
-            millis: 0
+            millis: 0,
+            totalTime: 0,
+            showModal: false
         };
 
         this._handleStartClick = this._handleStartClick.bind(this);
         this._handleStopClick = this._handleStopClick.bind(this);
         this._handleResetClick = this._handleResetClick.bind(this);
+        this.close = this.close.bind(this);
+        this.open = this.open.bind(this);
     }
 
     _handleResetClick(event) {
@@ -40,12 +46,28 @@ class Timer extends React.Component {
         }
     }
 
-    _handleStopClick(event) {
-        this.running = false;
-        const finalTime = `${this.zeroPad(this.state.minutes)}:${this.zeroPad(this.state.seconds)}`;
-        console.log(finalTime);
+    showFinalModal() {
+      console.log('stateTimeModal', this.state.totalTime);
+      this.setState({ showModal: true });
     }
 
+    _handleStopClick(event) {
+        this.running = false;
+
+        const finalTime = `${this.zeroPad(this.state.minutes)}:${this.zeroPad(this.state.seconds)}`;
+        console.log(finalTime);
+        this.setState({totalTime: finalTime});
+        console.log('state', this.state.totalTime);
+        this.showFinalModal()
+    }
+
+    close() {
+      this.setState({ showModal: false });
+    }
+
+    open() {
+    }
+    
     tick() {
         let millis = this.state.millis + 1;
         let seconds = this.state.seconds;
@@ -126,13 +148,32 @@ class Timer extends React.Component {
                     <button ref="btnStart"
                         className="btn start"
                         onClick={this._handleStartClick}>Start</button>
-                    <button ref="btnStop"
-                        className="btn stop disabled"
-                        onClick={this._handleStopClick}>Finished</button>
+
+                        <button ref="btnStop"
+                            className="btn stop disabled"
+                            onClick={this._handleStopClick}>Finished</button>
                       {/*<button ref="btnReset"
                         className="btn reset disabled"
                         onClick={this._handleResetClick}>Reset</button>*/}
                 </footer>
+
+                <Modal show={this.state.showModal} onHide={this.close}  dialogClassName={styles.modal}>
+                <Modal.Header closeButton>
+                </Modal.Header>
+                <Modal.Body>
+                  <div className={styles.modalWrapper}>
+                    {'Congratulations! You have completed the tasks in '}
+                    {this.state.totalTime}
+                  </div>
+
+                </Modal.Body>
+                <Modal.Footer>
+                  <Link to='/'>
+                    <Button onClick={this.close}>Completed Exercise</Button>
+                  </Link>
+                </Modal.Footer>
+              </Modal>
+
             </div>);
     }
 }
